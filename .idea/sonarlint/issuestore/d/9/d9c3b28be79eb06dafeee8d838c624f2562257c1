@@ -1,0 +1,24 @@
+
+fsquid:S00112†"FDefine and throw a dedicated exception instead of using a generic one.(—»î™8¡àÖº—-
+rsquid:S1192]"ODefine a constant instead of duplicating this literal "TEMP$USER_NAME" 7 times.(É®ü¤şÿÿÿÿ8¡àÖº—-
+osquid:CommentedOutCodeLine¥"<This block of commented-out lines of code should be removed.(ÔÖ½òşÿÿÿÿ8¡àÖº—-
+qsquid:S1192Ú"MDefine a constant instead of duplicating this literal ", ipClient: " 3 times.(Ø‚õáûÿÿÿÿ8¡àÖº—-
+osquid:CommentedOutCodeLineë"<This block of commented-out lines of code should be removed.(è¯€şÿÿÿÿ8¡àÖº—-
+jsquid:CommentedOutCodeLineô"<This block of commented-out lines of code should be removed.(¿á‚ö8¡àÖº—-
+msquid:S1192Ú"IDefine a constant instead of duplicating this literal "userId: " 3 times.(Ø‚õáûÿÿÿÿ8¡àÖº—-
+osquid:CommentedOutCodeLine‘"<This block of commented-out lines of code should be removed.(Ûêá÷şÿÿÿÿ8¡àÖº—-
+\squid:S2254¤"=Remove use of this unsecured "getRequestedSessionId()" method(š™ñù8¡àÖº—-
+bsquid:HiddenFieldCheck™"8Rename "user" which hides the field declared at line 65.( ñî8¡àÖº—-
+osquid:CommentedOutCodeLineˆ"<This block of commented-out lines of code should be removed.(Ü¼Èüøÿÿÿÿ8¡àÖº—-
+jsquid:CommentedOutCodeLine§"<This block of commented-out lines of code should be removed.(ÌÖÚ8¡àÖº—-
+bsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(Õ ¦âıÿÿÿÿ8¡àÖº—-
+Xsquid:S3400ô"9Remove this method and declare a constant for this value.(ñé‘º8¡àÖº—-
+Ysquid:S1905£"5Remove this unnecessary cast to "HttpServletRequest".(—¢šÿÿÿÿÿ8¡àÖº—-
+osquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(”à©Õÿÿÿÿÿ8¡àÖº—-
+osquid:S1192"KDefine a constant instead of duplicating this literal "[usuario: " 5 times.(Ù¿ù“ÿÿÿÿÿ8¡àÖº—-
+vsquid:S3776Ö"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(¦­¬¸ıÿÿÿÿ8¡àÖº—-
+Jsquid:S1948="'Make "model" transient or serializable.(Ïù¥ÿÿÿÿÿ8¡àÖº—-
+dsquid:S1192s"FDefine a constant instead of duplicating this literal "https" 4 times.(Áë¨î8¡àÖº—-
+Ysquid:S1141Û"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8¡àÖº—-
+jsquid:CommentedOutCodeLine¶"<This block of commented-out lines of code should be removed.(ğ«òõ8¡àÖº—-
+jsquid:CommentedOutCodeLine­"<This block of commented-out lines of code should be removed.(‹ìŒá8¡àÖº—-

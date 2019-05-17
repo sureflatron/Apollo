@@ -1,0 +1,9 @@
+
+psquid:S22937"YReplace the type specification in this constructor call with the diamond operator ("<>").(”‚ú÷
+Esquid:S14810")Remove this unused "sent" local variable.(Ü³‘îÿÿÿÿÿ
+Asquid:S14811"*Remove this unused "trash" local variable.(¨ë›º
+@squid:S14812")Remove this unused "junk" local variable.(¦ó×
+Asquid:S14814"*Remove this unused "gmail" local variable.(µì¾‘
+Hsquid:S14815",Remove this unused "hotmail" local variable.(şá›Òúÿÿÿÿ
+Gsquid:S1948#"+Make "mailboxes" transient or serializable.(«©ïÿÿÿÿÿ
+Esquid:S1948)")Make "mailbox" transient or serializable.(á–²¥øÿÿÿÿ

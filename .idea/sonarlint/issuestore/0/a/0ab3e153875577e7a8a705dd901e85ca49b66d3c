@@ -1,0 +1,8 @@
+
+hjavascript:S2589÷"LRefactor this code so that this expression does not always evaluate to true.(ÞâÝ/
+Qjavascript:S878¤"5Remove use of all comma operators in this expression.(Ç¿°½
+Wjavascript:S1854—":Remove this useless assignment to local variable "KEYDOWN"(ˆçÖá
+Zjavascript:S1854 "8Remove this useless assignment to local variable "KEYUP"(‡ë×Øüÿÿÿÿ
+Yjavascript:S1854”"<Remove this useless assignment to local variable "SCROLLBAR"(Â„ì¢
+[javascript:S1854Ã"9Remove this useless assignment to local variable "vendor"(Ð¤™øÿÿÿÿ
+\javascript:S1854¤"?Remove this useless assignment to local variable "contentClass"(Ç¿°½

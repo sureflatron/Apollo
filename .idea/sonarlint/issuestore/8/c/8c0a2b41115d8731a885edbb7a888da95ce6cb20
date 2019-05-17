@@ -1,0 +1,16 @@
+
+esquid:S1192Í"HDefine a constant instead of duplicating this literal "Brand 4" 5 times.(Ú¹‰àşÿÿÿÿ
+gsquid:S1192ø"ODefine a constant instead of duplicating this literal "Custom Options" 3 times.(ÊÆ·“
+`squid:S1192Ì"HDefine a constant instead of duplicating this literal "Brand 3" 5 times.(ìš“¼
+`squid:S1192Ë"HDefine a constant instead of duplicating this literal "Brand 2" 5 times.(ÒŠõ
+csquid:S1192Õ"FDefine a constant instead of duplicating this literal "Girls" 5 times.(ŠÒÖÀûÿÿÿÿ
+dsquid:S1192ò"GDefine a constant instead of duplicating this literal "Births" 3 times.(Ú…îãûÿÿÿÿ
+`squid:S1192Ê"HDefine a constant instead of duplicating this literal "Brand 1" 5 times.(†ê€¥
+csquid:S1192ğ"FDefine a constant instead of duplicating this literal "Years" 3 times.(ç¸ëëıÿÿÿÿ
+qsquid:S2293ó"YReplace the type specification in this constructor call with the diamond operator ("<>").(…‹Š­
+vsquid:S2293ú"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ğ€·éûÿÿÿÿ
+vsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ú‚äÿÿÿÿÿ
+Fsquid:S2140½")Use "java.util.Random.nextInt()" instead.(€ŸÈÇúÿÿÿÿ
+Fsquid:S2140¾")Use "java.util.Random.nextInt()" instead.(¢ĞÚ§ûÿÿÿÿ
+qsquid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(Æ–í‚
+Dsquid:S3599",Use another way to initialize this instance.(Æ–í‚

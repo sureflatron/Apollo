@@ -1,0 +1,178 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:pa="http://primefaces.org/apollo">
+
+    <div class="topbar clearfix">
+        <p:graphicImage class="logo" library="apollo-layout" name="images/apollo_logo.png"/>
+
+        <a id="menu-button" href="#">
+            <i class="fa fa-align-left"></i>
+        </a>
+
+        <a href="#" class="profile">
+            <span class="username">#{login.userId}</span>
+            <p:graphicImage name="images/avatar.png" library="apollo-layout"/>
+            <i class="fa fa-angle-down"></i>
+        </a>
+
+        <span class="topbar-themeswitcher">
+            <h:form>
+                <p:inputSwitch value="#{guestPreferences.dark}">
+                    <p:ajax listener="#{guestPreferences.changeScheme}"
+                            oncomplete="setTimeout(function() {document.forms[0].submit()}, 500)"/>
+                </p:inputSwitch>
+            </h:form>
+        </span>
+        <ul class="topbar-menu fadeInDown">
+            <li>
+                <a href="#">
+                    <i class="topbar-icon fa fa-fw fa-user"></i>
+                    <span class="topbar-item-name">Profile</span>
+                </a>
+                <ul>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="fa fa-fw fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="fa fa-fw fa-user-secret"></i>
+                            <span>Privacy</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="fa fa-fw fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="localidad.xhtml" onclick="return confirm('¿Esta seguro que desea salir?');">
+                            <i class="fa fa-fw fa-sign-out"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="topbar-icon fa fa-fw fa-cog"></i>
+                    <span class="topbar-item-name">Settings</span>
+                </a>
+                <ul>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="fa fa-fw fa-paint-brush"></i>
+                            <span>Change Theme</span>
+                            <span class="topbar-badge">1</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="fa fa-fw fa-star-o"></i>
+                            <span>Favorites</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="fa fa-fw fa-lock"></i>
+                            <span>Lock Screen</span>
+                            <span class="topbar-badge">3</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="fa fa-fw fa-picture-o"></i>
+                            <span>Wallpaper</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="topbar-icon fa fa-fw fa-envelope-o"></i>
+                    <span class="topbar-item-name">Messages</span>
+                    <span class="topbar-badge">5</span>
+                </a>
+                <ul>
+                    <li role="menuitem">
+                        <a href="#" class="topbar-message">
+                            <p:graphicImage name="images/avatar1.png" library="apollo-layout" width="35"/>
+                            <span>Give me a call</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#" class="topbar-message">
+                            <p:graphicImage name="images/avatar2.png" library="apollo-layout" width="35"/>
+                            <span>Reports attached</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#" class="topbar-message">
+                            <p:graphicImage name="images/avatar3.png" library="apollo-layout" width="35"/>
+                            <span>About your invoice</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#" class="topbar-message">
+                            <p:graphicImage name="images/avatar2.png" library="apollo-layout" width="35"/>
+                            <span>Meeting today</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#" class="topbar-message">
+                            <p:graphicImage name="images/avatar4.png" library="apollo-layout" width="35"/>
+                            <span>Out of office</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="topbar-icon fa fa-fw fa-bell-o"></i>
+                    <span class="topbar-item-name">Notifications</span>
+                    <span class="topbar-badge">2</span>
+                </a>
+                <ul>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="fa fa-fw fa-tasks"></i>
+                            <span>Pending tasks</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="fa fa-fw fa-calendar-check-o"></i>
+                            <span>Meeting today</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="fa fa-fw fa-download"></i>
+                            <span>Download</span>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#">
+                            <i class="fa fa-fw fa-plane"></i>
+                            <span>Book flight</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="topbar-search-item">
+                <span class="topbar-search">
+                    <input type="text" placeholder="Search"/>
+                    <span class="fa fa-search"></span>
+                </span>
+            </li>
+        </ul>
+    </div>
+
+</ui:composition>

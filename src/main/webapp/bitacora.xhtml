@@ -1,0 +1,149 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml"
+                xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <ui:define name="title">#{login.tituloAplicacion}</ui:define>
+
+    <ui:define name="head">
+        <style type="text/css">
+            .ui-steps .ui-steps-item {
+                width: 25%;
+            }
+
+            .ui-g-12.ui-lg-6 {
+                width: 100%;
+            }
+
+            .ui-panelgrid-cell.label.ui-g-12.ui-md-3 {
+                width: 100px;
+            }
+
+
+        </style>
+    </ui:define>
+    <ui:define name="content">
+        <h:form id="mainForm">
+            <c:set var="nombreValidator"
+                   value="#{bitacoraForm.validateParameter.get('EXPRESION_REGULAR_REQUIRED')}"/>
+            <c:set var="nombreValidatorMsg"
+                   value="#{bitacoraForm.validateParameter.get('EXPRESION_REGULAR_REQUIRED_MSG')}"/>
+            <c:set var="nombreValidatorSummary"
+                   value="#{bitacoraForm.validateParameter.get('SUMMARY_MSG')}"/>
+
+            <div class="ui-g ui-fluid">
+                <div class="ui-g-12 ui-lg-6">
+                    <div class="card no-margin">
+                        <h1>BITÁCORA</h1>
+                        <p:panelGrid columns="4" layout="grid" style="border:0px !important; background:none;"
+                                     id="panel"
+                                     styleClass="ui-panelgrid-blank" columnClasses="label,campo,label,campo">
+                            <p:outputLabel value="Usuario"/>
+                            <p:selectOneMenu value="#{bitacoraForm.usuarioSelect}" autoWidth="false"
+                                             onselect="#{bitacoraForm.usuarioSelect}" filter="true"
+                                             filterMatchMode="contains">
+                                <f:selectItems value="#{bitacoraForm.selectItemsUsuarios}"/>
+                            </p:selectOneMenu>
+                            <p:outputLabel for="Direccionip" value="Dirección IP"/>
+                            <p:inputText id="Direccionip" maxlength="30" autocomplete="off"
+                                         value="#{bitacoraForm.direccionIp}">
+                                <f:validator validatorId="regexResolverValidatorOptional"/>
+                                <f:attribute name="REGEX_MESSAGE" value="#{nombreValidatorMsg}"/>
+                                <f:attribute name="REGEX_VALIDATOR" value="#{nombreValidator}"/>
+                                <f:attribute name="REGEX_SUMMARY" value="#{nombreValidatorSummary}"/>
+
+                            </p:inputText>
+                            <h:outputLabel value="Fecha Inicio"/>
+                            <p:calendar value="#{bitacoraForm.fechainc}"
+                                        pattern="dd/MM/yyyy HH:mm:ss" styleClass="calendario"
+                                        autocomplete="off"/>
+
+                            <h:outputLabel value="Fecha Fin"/>
+                            <p:calendar value="#{bitacoraForm.fechafin}"
+                                        pattern="dd/MM/yyyy HH:mm:ss" styleClass="calendario"
+                                        autocomplete="off"/>
+                            <f:facet name="footer">
+                                <p:commandButton value="Buscar" icon="fa fa-binoculars" style="width: 100px"
+                                                 actionListener="#{bitacoraForm.buscar()}"
+                                                 update=":mainForm :frmDetalle:tableBitacora"
+                                                 onclick="PF('dialogContent').show();"
+                                                 oncomplete="PF('dialogContent').hide();"/>
+                                <p:commandButton value="Limpiar" icon="fa fa-close" process="@this"
+                                                 action="#{bitacoraForm.limpiar()}" style="width: 100px"
+                                                 update=":mainForm :frmDetalle"> <p:resetInput
+                                        target="panel"/></p:commandButton>
+                            </f:facet>
+                        </p:panelGrid>
+                    </div>
+                </div>
+            </div>
+
+
+        </h:form>
+
+        <h:form id="frmDetalle">
+            <br/>
+            <div class="card no-margin">
+                <h1>LISTA ROLES</h1>
+                <p:dataTable id="tableBitacora" var="row" value="#{bitacoraForm.listBitacora}" paginator="true"
+                             rows="50" reflow="true"
+                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown} {Exporters}"
+                             rowsPerPageTemplate="50,100,500,1000,2000,3000,4000,5000"
+                             currentPageReportTemplate="Página: ({currentPage} de {totalPages})">
+
+                    <f:facet name="{Exporters}">
+                        <div style="float:right;padding-top: 5px;">
+                            <h:commandLink style="padding: 3px;">
+                                <p:graphicImage value="/resources/icons/excel.png"
+                                                title="Exportar a Excel"
+                                                width="13"/>
+                                <p:dataExporter type="xls" target="tableBitacora"
+                                                fileName="listado"/>
+                            </h:commandLink>
+                            <h:commandLink style="padding: 3px;">
+                                <p:graphicImage value="/resources/icons/pdfFinal.png"
+                                                title="Exportar a pdf"
+                                                width="13"/>
+                                <p:dataExporter type="pdf" target="tableBitacora"
+                                                fileName="listado"/>
+                            </h:commandLink>
+
+                        </div>
+                    </f:facet>
+
+                    <p:column sortBy="#{row.fecha}" filterBy="#{row.fecha}" filterMatchMode="contains"
+                              headerText="FECHA">
+                        <h:outputText value="#{row.fecha}">
+                            <f:convertDateTime pattern="dd-MM-yyyy HH:mm:ss"/>
+                        </h:outputText>
+                    </p:column>
+
+                    <p:column headerText="ACCIONES" sortBy="#{row.accion}" filterBy="#{row.accion}"
+                              filterMatchMode="contains"
+                              exportable="false">
+                        <h:outputText value="#{row.accion}"/>
+                    </p:column>
+
+                    <p:column headerText="FORMULARIO" sortBy="#{row.formulario}" filterBy="#{row.formulario}">
+                        <h:outputText value="#{row.formulario}"/>
+                    </p:column>
+
+                    <p:column headerText="USUARIO" sortBy="#{row.usuario}" filterBy="#{row.usuario}">
+                        <h:outputText value="#{row.usuario}"/>
+                    </p:column>
+
+                    <p:column headerText="DIRECCION IP" sortBy="#{row.direccionIp}" filterBy="#{row.direccionIp}">
+                        <h:outputText value="#{row.direccionIp}"/>
+                    </p:column>
+
+                </p:dataTable>
+
+
+            </div>
+        </h:form>
+    </ui:define>
+
+</ui:composition>

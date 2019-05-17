@@ -1,0 +1,125 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml"
+                xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <ui:define name="title">#{login.tituloAplicacion}</ui:define>
+
+    <ui:define name="head">
+        <style type="text/css">
+            .ui-steps .ui-steps-item {
+                width: 25%;
+            }
+
+            .ui-g-12.ui-lg-6 {
+                width: 100%;
+            }
+
+            .ui-panelgrid-cell.label.ui-g-12.ui-md-3 {
+                width: 100px;
+            }
+        </style>
+    </ui:define>
+    <ui:define name="content">
+        <h:form id="mainForm">
+            <c:set var="nombreValidator"
+                   value="#{muGrupoBean.validateParameter.get('EXPRESION_REGULAR_REQUIRED')}"/>
+            <c:set var="nombreValidatorMsg"
+                   value="#{muGrupoBean.validateParameter.get('EXPRESION_REGULAR_REQUIRED_MSG')}"/>
+            <c:set var="nombreValidatorSummary"
+                   value="#{muGrupoBean.validateParameter.get('SUMMARY_MSG')}"/>
+
+            <div class="ui-g ui-fluid">
+                <div class="ui-g-12 ui-lg-6">
+                    <div class="card no-margin">
+                        <h1>GESTIÓN DE GRUPOS </h1>
+                        <p:panelGrid columns="4" layout="grid" style="border:0px !important; background:none;"
+                                     id="panel"
+                                     styleClass="ui-panelgrid-blank" columnClasses="label,campo,label,campo">
+                            <p:outputLabel value="NOMBRE"></p:outputLabel>
+                            <p:inputText placeholder="Nombre" value="#{muGrupoBean.group.nombre}">
+                                <f:validateRequired/>
+                                <f:validator validatorId="regexResolverValidator"/>
+                                <f:attribute name="REGEX_VALIDATOR" value="#{nombreValidator}"/>
+                                <f:attribute name="REGEX_MESSAGE" value="#{nombreValidatorMsg}"/>
+                                <f:attribute name="REGEX_SUMMARY" value="#{nombreValidatorSummary}"/>
+                                <f:attribute name="FIELD_VALUE" value="Nombre"/>
+                            </p:inputText>
+                            <p:outputLabel value="DESCRIPCION"></p:outputLabel>
+                            <p:inputText placeholder="Descripcion" value="#{muGrupoBean.group.detalle}"/>
+
+                            <p:outputLabel for="somRol" value="Rol *"/>
+                            <p:selectOneMenu id="somRol" value="#{muGrupoBean.select}" onselect="#{muGrupoBean.select}">
+                                <f:selectItems value="#{muGrupoBean.selectItems}"/>
+                            </p:selectOneMenu>
+                            <f:facet name="footer">
+                                <p:commandButton value="Guardar" actionListener="#{muGrupoBean.saveGroup()}" style="width: 100px"
+                                                 update=":mainForm :mainForm2"/>
+                                <p:commandButton value="Limpiar" process="@this" style="width: 100px"
+                                                 action="#{muGrupoBean.newGroup()}"
+                                                 update=":mainForm"> <p:resetInput target="panel"/></p:commandButton>
+                            </f:facet>
+                        </p:panelGrid>
+                    </div>
+                </div>
+            </div>
+
+
+        </h:form>
+
+        <h:form id="mainForm2">
+            <br/>
+            <div class="card no-margin">
+                <h1>LISTA GRUPOS</h1>
+                <p:dataTable var="item" value="#{muGrupoBean.listGroup}" paginator="true" rows="100"
+                             paginatorTemplate="{Exporters} {CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown} "
+                             rowsPerPageTemplate="100,500,1000,2000,3000,4000,5000" styleClass="" reflow="true"
+                             currentPageReportTemplate="Página: ({currentPage} de {totalPages})">
+                    <p:column headerText="ACCIONES" style="text-align: justify;" width="70" exportable="false">
+
+                        <h:commandLink id="deleteLink" action="#{muGrupoBean.deleteRoleGroup}"
+
+                                       onclick="return confirm('¿Esta seguro que desea eliminar este registro?');">
+                            <h:graphicImage id="deleteImage" alt="Eliminar"
+                                            url="/resources/icons/delete.png" height="20" width="20"
+                                            styleClass="icon" title="Eliminar"/>
+                            <f:param name="groupId" value="#{item.grupoId}"/>
+                        </h:commandLink>
+
+                        <h:commandLink id="editLink" action="#{muGrupoBean.editRoleGroup}"
+                        >
+                            <h:graphicImage id="editImage" alt="Modificar"
+                                            url="/resources/icons/edit.png" height="20" width="20"
+                                            styleClass="icon" title="Editar"/>
+                            <f:param name="groupId" value="#{item.grupoId}"/>
+                        </h:commandLink>
+
+                    </p:column>
+
+
+                    <p:column sortBy="#{item.nombre}" filterBy="#{item.nombre}"
+                              filterMatchMode="contains">
+                        <f:facet name="header">
+                            <h:outputText value="NOMBRE"/>
+                        </f:facet>
+                        <h:outputText value="#{item.nombre}"/>
+                    </p:column>
+
+                    <p:column sortBy="#{item.detalle}" filterBy="#{item.detalle}"
+                              filterMatchMode="contains">
+                        <f:facet name="header">
+                            <h:outputText value="DESCRIPCIÓN"/>
+                        </f:facet>
+                        <h:outputText value="#{item.detalle}"/>
+                    </p:column>
+
+                </p:dataTable>
+            </div>
+        </h:form>
+
+    </ui:define>
+
+</ui:composition>

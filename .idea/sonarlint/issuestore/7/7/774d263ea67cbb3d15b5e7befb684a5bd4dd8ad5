@@ -1,0 +1,6 @@
+
+Osquid:S1172°"2Remove this unused method parameter "actionEvent".(ªë¥Ïûÿÿÿÿ
+@squid:S2140G")Use "java.util.Random.nextInt()" instead.(ê¿Œ”
+Hsquid:S1948)",Make "eventModel" transient or serializable.(“ù‚ øÿÿÿÿ
+Gsquid:S1948+"0Make "lazyEventModel" transient or serializable.(±–Žï
+=squid:S1948-"'Make "event" transient or serializable.(×›¸O

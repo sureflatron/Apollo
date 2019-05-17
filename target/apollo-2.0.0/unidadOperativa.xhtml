@@ -1,0 +1,145 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml"
+                xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <ui:define name="title">#{login.tituloAplicacion}</ui:define>
+
+    <ui:define name="head">
+        <style type="text/css">
+            .ui-steps .ui-steps-item {
+                width: 25%;
+            }
+            .ui-g-12.ui-lg-6 {
+                width: 100%;
+            }
+
+            .ui-panelgrid-cell.label.ui-g-12.ui-md-3 {
+                width: 100px;
+            }
+        </style>
+    </ui:define>
+    <ui:define name="content">
+        <h:form id="mainForm">
+            <c:set var="nombreValidator"
+                   value="#{uOBean.validateParameter.get('EXPRESION_REGULAR_REQUIRED')}"/>
+            <c:set var="nombreValidatorMsg"
+                   value="#{uOBean.validateParameter.get('EXPRESION_REGULAR_REQUIRED_MSG')}"/>
+            <c:set var="nombreValidatorSummary"
+                   value="#{uOBean.validateParameter.get('SUMMARY_MSG')}"/>
+
+            <div class="ui-g ui-fluid">
+                <div class="ui-g-12 ui-lg-6">
+                    <div class="card no-margin">
+                        <h1>GESTIÓN DE UNIDAD OPERATIVA </h1>
+
+                        <p:panelGrid columns="4" layout="grid" style="border:0px !important; background:none;"
+                                     id="panel"
+                                     styleClass="ui-panelgrid-blank" columnClasses="label,campo,label,campo">
+
+                            <p:outputLabel value="NOMBRE"></p:outputLabel>
+                            <p:inputText placeholder="Nombre" value="#{uOBean.unidadOperativaEntityObj.nombre}">
+                                <f:validateRequired/>
+                                <f:validator validatorId="regexResolverValidator"/>
+                                <f:attribute name="REGEX_VALIDATOR" value="#{nombreValidator}"/>
+                                <f:attribute name="REGEX_MESSAGE" value="#{nombreValidatorMsg}"/>
+                                <f:attribute name="REGEX_SUMMARY" value="#{nombreValidatorSummary}"/>
+                                <f:attribute name="FIELD_VALUE" value="Nombre"/>
+                            </p:inputText>
+                            <p:outputLabel value="DESCRIPCION"></p:outputLabel>
+                            <p:inputText placeholder="Descripcion" maxlength="50"
+                                         value="#{uOBean.unidadOperativaEntityObj.descripcion}"/>
+                            <f:facet name="footer">
+                                <p:commandButton value="Guardar" actionListener="#{uOBean.actionUO}" style="width: 100px"
+                                                 update=":mainForm :mainForm2"/>
+                                <p:commandButton value="Limpiar" process="@this" style="width: 100px"
+                                                 action="#{uOBean.newUO()}"
+                                                 update=":mainForm"> <p:resetInput target="panel"/></p:commandButton>
+                            </f:facet>
+
+                        </p:panelGrid>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </h:form>
+
+        <h:form id="mainForm2">
+            <br/>
+            <div class="ui-g">
+                <div class="ui-g-12">
+                    <div class="card no-margin">
+                        <h1>LISTA DE UNIDADES OPERATIVA</h1>
+                        <p:dataTable  id="tbl" var="row" value="#{uOBean.unidadOperativaEntityList}" paginator="true" rows="100"
+                                     paginatorTemplate="{CurrentPageReport} {Exporters}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown} "
+                                     rowsPerPageTemplate="100,500,1000,2000,3000,4000,5000" reflow="true">
+                            <f:facet name="{Exporters}">
+                                <div style="float:right;padding-top: 5px;">
+                                    <h:commandLink style="padding: 3px;">
+                                        <p:graphicImage value="/resources/icons/excel.png"
+                                                        title="Exportar a Excel"
+                                                        width="15"/>
+                                        <p:dataExporter type="xls" target="tbl"
+                                                        fileName="listado"/>
+                                    </h:commandLink>
+
+                                    <h:commandLink style="padding: 3px;">
+                                        <p:graphicImage value="/resources/icons/pdf.png"
+                                                        title="Exportar a pdf"
+                                                        width="15"/>
+                                        <p:dataExporter type="pdf" target="tbl"
+                                                        fileName="listado"/>
+                                    </h:commandLink>
+                                </div>
+                            </f:facet>
+                            <p:column headerText="ACCIONES" style="text-align: justify;" width="70" exportable="false">
+
+                                <h:commandLink id="deleteLink" action="#{uOBean.deleteUO(row)}"
+                                               onclick="return confirm('¿Esta seguro que desea eliminar este registro?');">
+                                    <h:graphicImage id="deleteImage" alt="Eliminar"
+                                                    url="/resources/icons/delete.png" height="17" width="17"
+                                                    styleClass="icon" title="Eliminar"/>
+                                    <f:param name="idUO" value="#{row.idUnidadOperativa}"/>
+                                </h:commandLink>
+
+                                <h:commandLink id="editLink" action="#{uOBean.editUO(row)}">
+                                    <h:graphicImage id="editImage" alt="Modificar"
+                                                    url="/resources/icons/edit.png" height="17" width="17"
+                                                    styleClass="icon" title="Editar"/>
+                                    <f:param name="idUO" value="#{row.idUnidadOperativa}"/>
+                                </h:commandLink>
+
+                            </p:column>
+
+
+                            <p:column sortBy="#{row.nombre}" filterBy="#{row.nombre}"
+                                      filterMatchMode="contains">
+                                <f:facet name="header">
+                                    <h:outputText value="NOMBRE"/>
+                                </f:facet>
+                                <h:outputText value="#{row.nombre}"/>
+                            </p:column>
+
+                            <p:column sortBy="#{row.descripcion}" filterBy="#{row.descripcion}"
+                                      filterMatchMode="contains">
+                                <f:facet name="header">
+                                    <h:outputText value="DESCRIPCIÓN"/>
+                                </f:facet>
+                                <h:outputText value="#{row.descripcion}"/>
+                            </p:column>
+
+                        </p:dataTable>
+                    </div>
+                </div>
+            </div>
+        </h:form>
+
+    </ui:define>
+
+</ui:composition>

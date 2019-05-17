@@ -1,0 +1,94 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="title">Menus</ui:define>
+
+    <ui:define name="head">
+        <style type="text/css">
+            .ui-steps .ui-steps-item {
+                width: 25%;
+            }
+
+            .ui-g-12.ui-lg-6 {
+                width: 100%;
+            }
+        </style>
+    </ui:define>
+    <ui:define name="content">
+        <p:growl id="growl" showDetail="true"/>
+
+        <h:form id="formParam">
+
+
+            <div class="ui-g ui-fluid">
+                <div class="ui-g-12 ui-lg-6">
+                    <div class="ui-g-12">
+                        <!-- Left Side -->
+                        <div class="card no-margin">
+                            <h1>CONFIGURACIÓN DE PARAMETROS</h1>
+                            <h:form id="formparams">
+                                <div class="ui-fluid">
+                                    <div class="ui-g-6">
+                                        <p:messages display="text" showDetail="true" globalOnly="true"
+                                                    showSummary="true"></p:messages>
+                                    </div>
+
+                                    <p:repeat value="#{configParameters.parametros}" var="par" varStatus="varParam">
+                                        <p:panelGrid id="pgrid" columns="2" layout="grid"
+                                                     columnClasses="ui-grid-col-4,ui-grid-col-8"
+                                                     styleClass="ui-panelgrid-blank">
+
+                                            <p:panelGrid columns="1" layout="grid"
+                                                         columnClasses="ui-grid-col-12"
+                                                         styleClass="ui-panelgrid-blank">
+                                                <p:outputLabel value="#{par.clave}"
+                                                               style="font-weight: bold; width:100px;max-width: 150px"></p:outputLabel>
+                                                <p>#{par.descripcion}</p>
+                                            </p:panelGrid>
+
+                                            <p:panelGrid columns="1" layout="grid" columnClasses="ui-grid-col-12"
+                                                         styleClass="ui-panelgrid-blank">
+                                                <p:inputTextarea id="#{varParam.index}_param"
+                                                                 value="#{par.valor}" rows="1"
+                                                                 style="height: 23px;width: 95%;"/>
+
+                                                <span></span>
+                                            </p:panelGrid>
+
+                                        </p:panelGrid>
+                                    </p:repeat>
+
+                                    <p:panelGrid id="idPanel" columns="3" layout="grid"
+                                                 columnClasses="ui-grid-col-9,ui-grid-col-1,ui-grid-col-1"
+                                                 styleClass="ui-panelgrid-blank">
+
+                                        <span></span>
+
+                                        <p:commandButton id="btn_guardar" style="margin-right:20px;"
+                                                         rendered="#{configParameters.countParams>0}"
+                                                         value="Guardar"
+                                                         actionListener="#{configParameters.updateParams}">
+
+                                        </p:commandButton>
+
+                                        <p:commandButton id="btn_cancelar" immediate="true"
+                                                         style="margin-right:20px;" value="Cancelar"
+                                                         action="/view/menu.xhtml?faces-redirect=true"/>
+
+                                    </p:panelGrid>
+
+                                </div>
+                            </h:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </h:form>
+
+    </ui:define>
+
+</ui:composition>

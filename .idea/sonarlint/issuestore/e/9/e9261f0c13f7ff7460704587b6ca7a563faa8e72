@@ -1,0 +1,12 @@
+
+nsquid:S1149Ο"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(Ο‹―Ψ
+squid:S1192"rDefine a constant instead of duplicating this literal ", Fallo al obtener el nombre completo del usuario" 3 times.(τ€„ξύÿÿÿÿ
+]squid:S3027\"FPut single-quotes around ',' to use the faster "indexOf(char)" method.(ΟΐΗ
+qsquid:S2293Ο"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ο‹―Ψ
+rsquid:S1149""VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(’Ύ›ρωÿÿÿÿ
+rsquid:S1149?"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(’Ύ›ρωÿÿÿÿ
+asquid:S1192+"JDefine a constant instead of duplicating this literal "usuario: " 7 times.(›…έ
+gsquid:CommentedOutCodeLineH"<This block of commented-out lines of code should be removed.(β£‘Άψÿÿÿÿ
+Hsquid:S1481Q"1Remove this unused "totalResults" local variable.(°¶
+jsquid:S3776Ι"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Τοαΰ
+Tsquid:S1197K"8Move the array designator from the variable to the type.(…ΨΧόÿÿÿÿ

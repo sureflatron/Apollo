@@ -1,0 +1,13 @@
+
+psquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(æ·®’şÿÿÿÿ
+csquid:S1192;"GDefine a constant instead of duplicating this literal "column" 5 times.(´Âòèøÿÿÿÿ
+]squid:S1192%"FDefine a constant instead of duplicating this literal "brand" 3 times.(¹ıãÚ
+usquid:S2293'"YReplace the type specification in this constructor call with the diamond operator ("<>").(µªäúÿÿÿÿ
+Fsquid:S1481;"*Remove this unused "model" local variable.(´Âòèøÿÿÿÿ
+?squid:S1481<")Remove this unused "year" local variable.(ª×’S
+Hsquid:S1481="1Remove this unused "manufacturer" local variable.(š‰Èù
+Asquid:S1481>"*Remove this unused "color" local variable.(Èø‘
+Isquid:S1481n"-Remove this unused "property" local variable.(­á®Åıÿÿÿÿ
+tsquid:S00116%"\Rename this field "VALID_COLUMN_KEYS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ıãÚ
+Isquid:S1948+"2Make "availableColumns" transient or serializable.(¶ÏŠÉ
+@squid:S1948.")Make "service" transient or serializable.(Ø¢§

@@ -1,0 +1,11 @@
+
+isquid:S1192("FDefine a constant instead of duplicating this literal "style" 6 times.(©±Ôµıÿÿÿÿ8ÁÜ©ë—-
+[
+squid:S1063"9Replace this use of System.out or System.err by a logger.(ó‹Ÿıÿÿÿÿ8ÁÜ©ë—-
+xsquid:S2293ä"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÌÃÙË8ÁÜ©ë—-
+Msquid:S1172œ".Remove this unused method parameter "submenu".(À²®8ÁÜ©ë—-
+vsquid:S3776¸"RRefactor this method to reduce its Cognitive Complexity from 37 to the 15 allowed.(¾Ğ˜ÿÿÿÿÿ8ÁÜ©ë—-
+}squid:S2293â"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ø½èşÿÿÿÿ8ÁÜ©ë—-
+fsquid:CallToDeprecatedMethodØ"6Remove this use of "findParentForm"; it is deprecated.(ßª8ÁÜ©ë—-
+psquid:S3776?"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(½¤Ë·8ÁÜ©ë—-
+esquid:S1192'"GDefine a constant instead of duplicating this literal "class" 11 times.(™ìŞİ8ÁÜ©ë—-

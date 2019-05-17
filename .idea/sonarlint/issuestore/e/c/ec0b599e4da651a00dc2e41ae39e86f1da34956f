@@ -1,0 +1,28 @@
+
+bsquid:S11925"KDefine a constant instead of duplicating this literal "Movie File" 8 times.(’œ‚‰
+bsquid:S1192-"KDefine a constant instead of duplicating this literal "JPEG Image" 4 times.(Úâ—
+^squid:S1192"HDefine a constant instead of duplicating this literal "Folder" 16 times.(Áß
+_squid:S1192-"HDefine a constant instead of duplicating this literal "picture" 6 times.(Úâ—
+bsquid:S1192("FDefine a constant instead of duplicating this literal "30 KB" 4 times.(ûÑˆİûÿÿÿÿ
+jsquid:S1192("NDefine a constant instead of duplicating this literal "Word Document" 4 times.(ûÑˆİûÿÿÿÿ
+esquid:S1192("IDefine a constant instead of duplicating this literal "document" 6 times.(ûÑˆİûÿÿÿÿ
+Isquid:S1481("-Remove this unused "expenses" local variable.(ûÑˆİûÿÿÿÿ
+Bsquid:S1481)"+Remove this unused "resume" local variable.(¼ü¨‹
+Bsquid:S1481*"+Remove this unused "refdoc" local variable.(®€ã©
+Asquid:S1481-"*Remove this unused "barca" local variable.(Úâ—
+Jsquid:S1481.".Remove this unused "primelogo" local variable.(½©ÄÔøÿÿÿÿ
+Csquid:S1481/",Remove this unused "optimus" local variable.(Ñãˆµ
+Dsquid:S14815"-Remove this unused "scarface" local variable.(’œ‚‰
+Gsquid:S14816"0Remove this unused "carlitosWay" local variable.(®Š¦°
+Fsquid:S14818"/Remove this unused "goodfellas" local variable.(ìË¼
+Hsquid:S14819"1Remove this unused "untouchables" local variable.(ÁÑä»
+Dsquid:S1481I"-Remove this unused "expenses" local variable.(´Ø¡¾
+Bsquid:S1481J"+Remove this unused "resume" local variable.(‰¥­™
+Bsquid:S1481K"+Remove this unused "refdoc" local variable.(­òØí
+Fsquid:S1481N"*Remove this unused "barca" local variable.(Àâìûÿÿÿÿ
+Esquid:S1481O".Remove this unused "primelogo" local variable.(æ…çÎ
+Hsquid:S1481P",Remove this unused "optimus" local variable.(ªàÛøÿÿÿÿ
+Csquid:S1481V"-Remove this unused "scarface" local variable.(ì˜÷
+Gsquid:S1481W"0Remove this unused "carlitosWay" local variable.(½ÎÕç
+Fsquid:S1481Y"/Remove this unused "goodfellas" local variable.(„±çß
+Msquid:S1481Z"1Remove this unused "untouchables" local variable.(í½Üıÿÿÿÿ

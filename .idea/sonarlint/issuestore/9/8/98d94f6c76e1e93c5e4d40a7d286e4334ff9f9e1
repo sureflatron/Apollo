@@ -1,0 +1,21 @@
+
+ijavascript:S2259n"HTypeError can be thrown as "Highcharts" might be null or undefined here.(ÒÁÍêşÿÿÿÿ
+`javascript:S2259š"CTypeError can be thrown as "point" might be null or undefined here.(ÌÔŞr
+Xjavascript:S4043¾$"<Move this array "reverse" operation to a separate statement.(—ıp
+‰javascript:S2583‡0"lChange this condition so that it does not always evaluate to "true"; some subsequent code is never executed.(ĞÃ£¾
+njavascript:S2589ØB"LRefactor this code so that this expression does not always evaluate to true.(­«àıÿÿÿÿ
+njavascript:S2589ˆL"LRefactor this code so that this expression does not always evaluate to true.(íçıìùÿÿÿÿ
+jjavascript:S2589óŠ"LRefactor this code so that this expression does not always evaluate to true.(Ã¤…¶
+‰javascript:S3579÷n"gMake "seriesPointAttr" an object if it must have named properties; otherwise, use a numeric index here.(‘¡×Ñüÿÿÿÿ
+~javascript:S3579Âo"aMake "pointAttr" an object if it must have named properties; otherwise, use a numeric index here.(“Ëëæ
+ƒjavascript:S3579Åo"aMake "pointAttr" an object if it must have named properties; otherwise, use a numeric index here.(†¬¶ïúÿÿÿÿ
+~javascript:S3579Ìo"aMake "pointAttr" an object if it must have named properties; otherwise, use a numeric index here.(äû†ğ
+Zjavascript:S1854ã"8Remove this useless assignment to local variable "chart"(°ºªßûÿÿÿÿ
+\javascript:S1854ø"?Remove this useless assignment to local variable "imageElement"(ªæ×
+Xjavascript:S1854Ó#";Remove this useless assignment to local variable "baseline"(­ç«
+`javascript:S1854ºG">Remove this useless assignment to local variable "hoverPoints"(ïñŸ£üÿÿÿÿ
+Yjavascript:S1854ã["7Remove this useless assignment to local variable "axis"(Š™¦åùÿÿÿÿ
+Wjavascript:S1854n":Remove this useless assignment to local variable "graphic"(ìÔ¾ò
+Tjavascript:S1854²x"7Remove this useless assignment to local variable "axis"(´Úõ
+Xjavascript:S1854¹":Remove this useless assignment to local variable "graphic"(©ßİß
+]javascript:S1854‡‹":Remove this useless assignment to local variable "newSize"(³Æ°İûÿÿÿÿ

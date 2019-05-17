@@ -1,0 +1,13 @@
+
+§%squid:RedundantThrowsDeclarationCheck"uRemove the declaration of thrown exception 'javax.faces.event.AbortProcessingException' which is a runtime exception.(∑å¡˝
+psquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(∂–©≤
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÕº
+psquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(∂–©≤
+psquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(∂–©≤
+Ysquid:UnusedPrivateMethod"6Remove this unused private "PropertyKeys" constructor.(◊Ö’§
+Osquid:S1161":Add the "@Override" annotation above this method signature(¡ªõÍ
+psquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(∂–©≤
+Osquid:S1161":Add the "@Override" annotation above this method signature(’ÒñΩ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(∂’€¡
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ®ê‹˛ˇˇˇˇ
+gsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë©∏Á

@@ -1,0 +1,14 @@
+
+Fsquid:S1481-"*Remove this unused "node2" local variable.(½ …øÿÿÿÿ
+Gsquid:S14813"+Remove this unused "node11" local variable.(Ë¼ÉÄÿÿÿÿÿ
+Hsquid:S14815",Remove this unused "node000" local variable.(Å¾û¨ÿÿÿÿÿ
+Hsquid:S14816",Remove this unused "node001" local variable.(ÌŸøõıÿÿÿÿ
+Csquid:S14817",Remove this unused "node010" local variable.(¬Èõ„
+Hsquid:S14819",Remove this unused "node100" local variable.(™ßüğıÿÿÿÿ
+Asquid:S1481="*Remove this unused "item1" local variable.(–Ìß·
+Fsquid:S1481>"*Remove this unused "item2" local variable.(›·²Ûûÿÿÿÿ
+Gsquid:S1481@"+Remove this unused "item00" local variable.(‡ê…àşÿÿÿÿ
+Csquid:S1948 "'Make "root1" transient or serializable.(‚„Åßùÿÿÿÿ
+>squid:S1948""'Make "root2" transient or serializable.(ÁóŞ§
+Ksquid:S1948$"/Make "selectedNode1" transient or serializable.(ˆú×Áüÿÿÿÿ
+Ksquid:S1948&"/Make "selectedNode2" transient or serializable.(’Â¡öüÿÿÿÿ

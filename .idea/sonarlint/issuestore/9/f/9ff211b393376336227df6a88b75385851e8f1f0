@@ -1,0 +1,15 @@
+
+isquid:S2077="RUse a variable binding mechanism to construct this query instead of concatenation.(¿¼í
+nsquid:S2077j"RUse a variable binding mechanism to construct this query instead of concatenation.(†ç¥Åşÿÿÿÿ
+osquid:S2077"RUse a variable binding mechanism to construct this query instead of concatenation.(†ç¥Åşÿÿÿÿ
+}squid:S1192³"eDefine a constant instead of duplicating this literal "and EXTRACT(month from ps.PERIODO)= " 3 times.(ıÒ”É
+_squid:S1192à"GDefine a constant instead of duplicating this literal "union " 3 times.(ÅŸí
+osquid:S2077½"RUse a variable binding mechanism to construct this query instead of concatenation.(†ç¥Åşÿÿÿÿ
+osquid:S2077¶"RUse a variable binding mechanism to construct this query instead of concatenation.(†ç¥Åşÿÿÿÿ
+osquid:S2077á"RUse a variable binding mechanism to construct this query instead of concatenation.(†ç¥Åşÿÿÿÿ
+isquid:S20772"RUse a variable binding mechanism to construct this query instead of concatenation.(¿¼í
+osquid:S2077è"RUse a variable binding mechanism to construct this query instead of concatenation.(†ç¥Åşÿÿÿÿ
+}squid:S1192¶"eDefine a constant instead of duplicating this literal " and EXTRACT(year from ps.PERIODO)= " 6 times.(®¹Ï“
+¢squid:S1192ˆ"‰Define a constant instead of duplicating this literal "INNER JOIN TIPO_SERVICIO ts ON ts.ID_TIPO_SERVICIO = s.ID_TIPO_SERVICIO " 3 times.(ÏËÖî
+jsquid:S2077¹"RUse a variable binding mechanism to construct this query instead of concatenation.(ÆÅ¢°
+osquid:S2077‘"RUse a variable binding mechanism to construct this query instead of concatenation.(†ç¥Åşÿÿÿÿ

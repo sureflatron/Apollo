@@ -1,0 +1,8 @@
+
+nsquid:CommentedOutCodeLineN"<This block of commented-out lines of code should be removed.(ÅÜëýÿÿÿÿ8ÆÚ›ž—-
+nsquid:S1192«"ODefine a constant instead of duplicating this literal "TEMP$USER_NAME" 4 times.(çä«8ÆÚ›ž—-
+psquid:S3776v"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ÕÖŒÓ8ÆÚ›ž—-
+Msquid:S19487"*Make "listUser" transient or serializable.(ˆ…‹„øÿÿÿÿ8‚®´”˜-
+Osquid:S19488",Make "listUserNA" transient or serializable.(Ã€ç±ùÿÿÿÿ8‚®´”˜-
+Dsquid:S1948;"&Make "user" transient or serializable.(™¥ýí8‚®´”˜-
+Rsquid:S1948G"4Make "selectMuUsuarioObj" transient or serializable.(‚”‡†8‚®´”˜-

@@ -1,0 +1,12 @@
+
+„squid:S1319"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(Òğ´
+„squid:S1319
+"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(­˜¼Ö
+squid:S1319"yThe type of the "mapLdapParameters" object should be an interface such as "Map" rather than the implementation "HashMap".(®¸ï‚
+ƒsquid:S1319"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(Ûå
+squid:S1319"vThe type of the "formParameters" object should be an interface such as "Map" rather than the implementation "HashMap".(Å›‰Û
+™squid:S1319"The type of the "mapMiscellaneousParameter" object should be an interface such as "Map" rather than the implementation "HashMap".(Ş‡Æœ
+„squid:S1319"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(É«Ğ€
+„squid:S1319	"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(Àú‰°
+“squid:S1319"|The type of the "mapValidateParameter" object should be an interface such as "Map" rather than the implementation "HashMap".(ı›ô³
+•squid:S1319"yThe type of the "mapEmailParameter" object should be an interface such as "Map" rather than the implementation "HashMap".(ıÒÇıÿÿÿÿ

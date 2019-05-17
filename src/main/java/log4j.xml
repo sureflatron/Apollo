@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p	[%C{1}:%L] [%t] [%M] %m%n" />
+		</layout>
+	</appender>
+
+	<!-- <appender name="FILE" class="org.apache.log4j.RollingFileAppender"> -->
+	<appender name="FILE" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${jboss.server.log.dir}/servBasicos.log" />		
+		<param name="Append" value="true" />
+		<!-- <param name="MaxFileSize" value="20MB" /> -->
+		<!-- <param name="MaxBackupIndex" value="100" /> -->
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p [%C{1}:%L] [%t] [%M] %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="com.myapps">
+		<level value="INFO" />
+		<appender-ref ref="FILE" />
+		<!-- <appender-ref ref="STDOUT" /> -->
+	</logger>
+
+	<root>
+		<priority value="off" />
+		<!-- <priority value="DEBUG" /> -->
+		<!-- <appender-ref ref="FILE" /> -->
+		<!-- <appender-ref ref="STDOUT" /> -->
+	</root>
+
+</log4j:configuration>

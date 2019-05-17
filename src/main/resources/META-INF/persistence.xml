@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+    <persistence-unit name="servBasicoDS" transaction-type="JTA">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+        <!-- <jta-data-source>VistaCCC</jta-data-source> -->
+        <jta-data-source>SBLOCAL</jta-data-source>
+        <class>myapps.abm.model.TipoTorreEntity</class>
+        <class>myapps.abm.model.ServicioEntity</class>
+        <class>myapps.abm.model.MonedaEntity</class>
+        <class>myapps.abm.model.TipoServicioEntity</class>
+        <class>myapps.abm.model.BancoEntity</class>
+        <class>myapps.abm.model.ProveedorEntity</class>
+        <class>myapps.abm.model.UnidadOperativaEntity</class>
+        <class>myapps.abm.model.PagoServicioEntity</class>
+        <class>myapps.abm.model.DepartamentoEntity</class>
+        <class>myapps.abm.model.LocalidadEntity</class>
+        <class>myapps.abm.model.MunicipioEntity</class>
+        <class>myapps.abm.model.ProvinciaEntity</class>
+        <class>myapps.abm.model.InmuebleEntity</class>
+        <class>myapps.abm.model.OrdenCompraEntity</class>
+        <class>myapps.abm.model.CargaEntity</class>
+        <class>myapps.abm.model.AlarmaEntity</class>
+        <class>myapps.abm.model.DocumentosEntity</class>
+        <class>myapps.abm.model.DetalleAlarmaEntity</class>
+        <class>myapps.abm.model.HistorialUsuarioEntity</class>
+        <class>myapps.user.model.MuUsuario</class>
+        <class>myapps.user.model.MuRol</class>
+        <class>myapps.abm.model.ContratosEntity</class>
+        <class>myapps.abm.model.RadioBaseEntity</class>
+        <class>myapps.abm.model.ConfiguracionesEntity</class>
+        <class>myapps.abm.model.HistorialPagosMasivosEntity</class>
+        <class>myapps.abm.model.EnvioEntity</class>
+        <class>myapps.abm.model.ContratosRenovadosEntity</class>
+        <class>myapps.abm.model.HistorialContratosEntity</class>
+        <class>myapps.abm.model.MedidorEntity</class>
+        <class>myapps.abm.model.ProcesosEntity</class>
+        <class>myapps.workflow.entity.SolicitudesEntity</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+
+    </persistence-unit>
+</persistence>

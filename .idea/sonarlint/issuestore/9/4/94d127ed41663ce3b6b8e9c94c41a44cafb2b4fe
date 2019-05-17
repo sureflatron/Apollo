@@ -1,0 +1,13 @@
+
+nsquid:S2737,"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(ö™û
+csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(¥æş‹øÿÿÿÿ
+¢%squid:RedundantThrowsDeclarationCheck1"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÉçŒ¥şÿÿÿÿ
+csquid:S001121"FDefine and throw a dedicated exception instead of using a generic one.(ÉçŒ¥şÿÿÿÿ
+nsquid:S2737#"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(ö™û
+¢%squid:RedundantThrowsDeclarationCheck6"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(çÉÁùÿÿÿÿ
+^squid:S00112'"FDefine and throw a dedicated exception instead of using a generic one.(ÓÂ©
+^squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ä¤•Ì
+csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(½ô›šıÿÿÿÿ
+csquid:S001126"FDefine and throw a dedicated exception instead of using a generic one.(çÉÁùÿÿÿÿ
+¤%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ä¤•Ì8“®´”˜-
+©%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(¥æş‹øÿÿÿÿ8“®´”˜-

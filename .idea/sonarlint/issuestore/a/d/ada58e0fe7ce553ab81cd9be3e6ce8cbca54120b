@@ -1,0 +1,16 @@
+
+‹#javascript:NonEmptyCaseWithoutBreakÎ"VEnd this switch case with an unconditional break, continue, return or throw statement.(ƒÀÐøÿÿÿÿ
+Qjavascript:S878ã"5Remove use of all comma operators in this expression.(ÍÖ·–
+Cjavascript:S878î""Remove use of this comma operator.(ž€´÷üÿÿÿÿ
+Cjavascript:S878Œ""Remove use of this comma operator.(ð‰õ¯þÿÿÿÿ
+Qjavascript:S878"5Remove use of all comma operators in this expression.(ªëù
+>javascript:S878›""Remove use of this comma operator.(–Æö¯
+Cjavascript:S878¡""Remove use of this comma operator.(í­üËýÿÿÿÿ
+=javascript:S878§""Remove use of this comma operator.(Ëø¬#
+Cjavascript:S878¹""Remove use of this comma operator.(»¡Á–þÿÿÿÿ
+Vjavascript:S878Ú"5Remove use of all comma operators in this expression.(»¥É˜ùÿÿÿÿ
+Ejavascript:PrimitiveWrappersc"Use a literal value for this.(ú´…Œ
+Ejavascript:PrimitiveWrappersd"Use a literal value for this.(ˆŸþ÷
+\javascript:S1854ý":Remove this useless assignment to local variable "members"(¥Äˆ úÿÿÿÿ
+Zjavascript:S1854–"=Remove this useless assignment to local variable "Properties"(Ï‘¤¿
+Xjavascript:S1854Ÿ";Remove this useless assignment to local variable "isSigned"(ºÿôŽ
